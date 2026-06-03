@@ -47,4 +47,9 @@ public class CalculadoraController {
         return ResponseEntity.ok(Map.of("resultado", resultado));
     }
 
+    @GetMapping("/multiplicacao")
+    public ResponseEntity<Map<String, Object>> multiplicacao(@RequestParam Double a, @RequestParam Double b) {
+        Double resultado = a * b;
+        return ResponseEntity.ok(Map.of("resultado", resultado));
+    }
 }
