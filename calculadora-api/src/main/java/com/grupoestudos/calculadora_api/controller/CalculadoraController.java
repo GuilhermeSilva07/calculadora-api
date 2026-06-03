@@ -29,7 +29,6 @@ public class CalculadoraController {
     public Map<String, Double> subtracao(@RequestParam Double a,
                                          @RequestParam Double b){
         Double resultado = a - b;
-        System.out.println(resultado);
         return Map.of("Resultado:", resultado);
     }
 
