@@ -36,8 +36,12 @@ public class CalculadoraController {
     @GetMapping("/divisao")
     public ResponseEntity<Map<String, Object>> divisao(@RequestParam Double a,
                                                        @RequestParam Double b) {
-        Double resultado = calculadoraService.divisao(a, b);
-        return ResponseEntity.ok(Map.of("resultado", resultado));
+        try {
+            Double resultado = calculadoraService.divisao(a, b);
+            return ResponseEntity.ok(Map.of("resultado", resultado));
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(Map.of("erro", e.getMessage()));
+        }
     }
 
     @GetMapping("/multiplicacao")
