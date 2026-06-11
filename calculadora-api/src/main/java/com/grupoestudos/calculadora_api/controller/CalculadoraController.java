@@ -47,4 +47,8 @@ public class CalculadoraController {
         Double resultado = calculadoraService.multiplicacao(a,b);
         return ResponseEntity.ok(Map.of("resultado", resultado));
     }
+    @GetMapping("/status")
+    public ResponseEntity<String> statusApi() {
+        return ResponseEntity.ok("API online");
+    }
 }
