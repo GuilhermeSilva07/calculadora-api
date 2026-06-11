@@ -47,4 +47,10 @@ public class CalculadoraController {
         Double resultado = calculadoraService.multiplicacao(a,b);
         return ResponseEntity.ok(Map.of("resultado", resultado));
     }
+
+    @GetMapping("/potencia")
+    public ResponseEntity<Map<String, Object>> potencia(@RequestParam Double a, @RequestParam Double b){
+        Double resultado = calculadoraService.potencia(a, b);
+        return  ResponseEntity.ok(Map.of("resultado", resultado));
+    }
 }
