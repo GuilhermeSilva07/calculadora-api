@@ -1,6 +1,9 @@
 package com.grupoestudos.calculadora_api.service;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+
+import java.util.Map;
 
 @Service
 public class CalculadoraService {
@@ -18,6 +21,9 @@ public class CalculadoraService {
     }
 
     public Double divisao (Double a, Double b){
+        if (b == 0 || a == 0) {
+           throw new IllegalArgumentException("Não é possível dividir por zero");
+        }
         return a / b;
     }
 }

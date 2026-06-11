@@ -34,10 +34,8 @@ public class CalculadoraController {
     }
 
     @GetMapping("/divisao")
-    public ResponseEntity<Map<String, Object>> divisao(@RequestParam Double a, @RequestParam Double b) {
-        if (b == 0) {
-            return ResponseEntity.badRequest().body(Map.of("erro", "Não é possível dividir por zero"));
-        }
+    public ResponseEntity<Map<String, Object>> divisao(@RequestParam Double a,
+                                                       @RequestParam Double b) {
         Double resultado = calculadoraService.divisao(a, b);
         return ResponseEntity.ok(Map.of("resultado", resultado));
     }
