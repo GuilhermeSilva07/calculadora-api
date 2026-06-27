@@ -18,6 +18,9 @@ public class CalculadoraService {
     }
 
     public Double divisao (Double a, Double b){
+        if (b == 0 || a == 0) {
+           throw new IllegalArgumentException("Não é possível dividir por zero");
+        }
         return a / b;
     }
 
