@@ -47,10 +47,10 @@ public class CalculadoraController {
         Double resultado = calculadoraService.multiplicacao(a,b);
         return ResponseEntity.ok(Map.of("resultado", resultado));
     }
-    @GetMapping("/status")
-    public ResponseEntity<Map<String, String>> statusApi() {
-        return ResponseEntity.ok(Map.of("status","online",
-        "mensagem", "API da Calculadora está funcionando!",
-        "horario", LocalDateTime.now().toString()));
+
+    @GetMapping("/potencia")
+    public ResponseEntity<Map<String, Object>> potencia(@RequestParam Double a, @RequestParam Double b){
+        Double resultado = calculadoraService.potencia(a, b);
+        return  ResponseEntity.ok(Map.of("resultado", resultado));
     }
 }

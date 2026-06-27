@@ -20,4 +20,6 @@ public class CalculadoraService {
     public Double divisao (Double a, Double b){
         return a / b;
     }
+
+    public Double potencia (Double a, Double b) { return Math.pow(a, b); }
 }
