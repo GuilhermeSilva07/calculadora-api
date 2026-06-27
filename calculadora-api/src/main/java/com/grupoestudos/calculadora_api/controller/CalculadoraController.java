@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
-
+import java.time.LocalDateTime;
 
 @RestController
 @RequestMapping("/calcular")
@@ -48,7 +48,9 @@ public class CalculadoraController {
         return ResponseEntity.ok(Map.of("resultado", resultado));
     }
     @GetMapping("/status")
-    public ResponseEntity<String> statusApi() {
-        return ResponseEntity.ok("API online");
+    public ResponseEntity<Map<String, String>> statusApi() {
+        return ResponseEntity.ok(Map.of("status","online",
+        "mensagem", "API da Calculadora está funcionando!",
+        "horario", LocalDateTime.now().toString()));
     }
 }
