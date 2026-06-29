@@ -1,0 +1,138 @@
+{
+  "info": {
+    "_postman_id": "7426f5a3-ce40-4373-be6f-f6654552d01b",
+    "name": "Calculadora API",
+    "description": "Collection para testar os endpoints da Calculadora API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47550962",
+    "_collection_link": "https://go.postman.co/collection/47550962-7426f5a3-ce40-4373-be6f-f6654552d01b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Soma",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/calcular/soma?a=10&b=5",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "calcular",
+            "soma"
+          ],
+          "query": [
+            {
+              "key": "a",
+              "value": "10"
+            },
+            {
+              "key": "b",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Subtracao",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/calcular/subtracao?a=10&b=5",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "calcular",
+            "subtracao"
+          ],
+          "query": [
+            {
+              "key": "a",
+              "value": "10"
+            },
+            {
+              "key": "b",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Divisao",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/calcular/divisao?a=10&b=5",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "calcular",
+            "divisao"
+          ],
+          "query": [
+            {
+              "key": "a",
+              "value": "10"
+            },
+            {
+              "key": "b",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Multiplicação",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/calcular/divisao?a=10&b=0",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "calcular",
+            "divisao"
+          ],
+          "query": [
+            {
+              "key": "a",
+              "value": "10"
+            },
+            {
+              "key": "b",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Status",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080/"
+    }
+  ]
+}
