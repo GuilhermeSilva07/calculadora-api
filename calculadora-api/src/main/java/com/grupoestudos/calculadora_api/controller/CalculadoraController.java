@@ -49,8 +49,7 @@ public class CalculadoraController {
     }
     @GetMapping("/status")
     public ResponseEntity<Map<String, String>> statusApi() {
-        return ResponseEntity.ok(Map.of("status","online",
-        "mensagem", "API da Calculadora está funcionando!",
-        "horario", LocalDateTime.now().toString()));
+        Map<String, String> dadosStatus = calculadoraService.obterStatus();
+        return ResponseEntity.ok(dadosStatus);
     }
 }
